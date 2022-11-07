@@ -15,7 +15,7 @@ mongoose.connect(mongoDBPath).then(
     function(){
   // App Routes
 app.get("/",function(req,res){
-   const response = {message : "API Works!"};
+   const response = {statuscode: res.statusCode,message : "API Works!"};
    res.json(response);
 });
 const noteRouter = require('./Routes/Note');
